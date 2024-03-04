@@ -17,7 +17,10 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const cors = require("cors");
-app.use(cors());
+const allowedOrigin = 'https://clothing-store-web.vercel.app';
+app.use(cors({
+    origin: allowedOrigin
+}));
 
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
