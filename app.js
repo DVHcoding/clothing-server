@@ -22,7 +22,10 @@ const allowedOrigin = 'https://clothing-store-web.vercel.app';
 //     origin: allowedOrigin
 // }));
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true // Bật chia sẻ cookie qua CORS
+}));
 
 
 const cookieParser = require("cookie-parser");
