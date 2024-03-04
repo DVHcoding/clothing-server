@@ -17,19 +17,9 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const cors = require("cors");
-
-const allowedOrigins = ['https://clothing-store-web.vercel.app', 'http://192.168.43.159:3000'];
-
+const allowedOrigin = 'https://clothing-store-web.vercel.app';
 app.use(cors({
-    origin: function (origin, callback) {
-        // Kiểm tra xem origin có trong danh sách allowedOrigins hay không. Nếu có, cho phép.
-        if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        } else {
-            // Nếu không, trả về lỗi CORS.
-            callback(new Error('Not allowed by CORS'));
-        }
-    }
+    origin: allowedOrigin
 }));
 
 
