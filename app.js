@@ -3,6 +3,9 @@
 \*-----------------------*/
 const errorMiddleware = require("./middleware/error");
 const product = require('./routes/productRoute');
+const user = require('./routes/userRoute');
+
+
 /*-----------------------*\
  * IMPORT Npm
 \*-----------------------*/
@@ -30,8 +33,8 @@ app.use(fileUpload());
 /*-----------------------------------*\
  * API
 \*-----------------------------------*/
-app.use('/api/v1', product);
-
+app.use("/api/v1", product);
+app.use("/api/v1", user);
 
 /*-----------------------------------*\
  * APPLY ERROR HANDLING MIDDLEWARE
