@@ -8,8 +8,7 @@ const connectDatabase = require("./config/database");
  * IMPORT Npm
 \*-----------------------*/
 const dotenv = require("dotenv");
-dotenv.config({ "path": "./.env" });
-
+dotenv.config();
 
 
 
