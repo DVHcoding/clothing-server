@@ -27,6 +27,7 @@ app.use(cors({
     credentials: true // Bật chia sẻ cookie qua CORS
 }));
 
+app.set("trust proxy", 1);
 
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
