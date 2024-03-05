@@ -38,14 +38,7 @@ const fileUpload = require("express-fileupload");
 app.use(express.json());
 app.use(fileUpload());
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: true, parameterLimit: 100000, limit: "500mb" }));
-
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*")
-    res.header(
-        "Access-Control-Allow-Headers",
-    )
-})
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
