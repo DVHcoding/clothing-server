@@ -17,17 +17,12 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const cors = require("cors");
-const allowedOrigin = 'https://clothing-store-web.vercel.app';
-// app.use(cors({
-//     origin: allowedOrigin
-// }));
-
+const allowedOrigin = 'https://learnlangs.online';
 app.use(cors({
-    origin: 'http://localhost:3000',
-    credentials: true // Bật chia sẻ cookie qua CORS
+    origin: allowedOrigin
 }));
 
-app.set("trust proxy", 1);
+
 
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
