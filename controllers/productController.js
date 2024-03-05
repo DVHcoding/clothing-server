@@ -95,9 +95,9 @@ exports.updateProduct = catchAsyncErrors(
             return next(new ErrorHandler("Product not found", 404));
         }
 
-        for (let i = 0; i < product.images.length; i++) {
-            await cloudinary.uploader.destroy(product.images[i].public_id);
-        }
+        // for (let i = 0; i < product.images.length; i++) {
+        //     await cloudinary.uploader.destroy(product.images[i].public_id);
+        // }
 
         product = await Product.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
