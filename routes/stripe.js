@@ -102,7 +102,7 @@ router.post(
     async (req, res) => {
         let data;
         let eventType;
-        let webhookSecret;
+        let webhookSecret = process.env.WEBHOOK_SECRET;
 
         if (webhookSecret) {
             let event;

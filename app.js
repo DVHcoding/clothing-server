@@ -23,7 +23,7 @@ const cors = require("cors");
 // // }));
 
 app.use(cors({
-    origin: 'https://learnlangs.online',
+    origin: '*',
     credentials: true // Bật chia sẻ cookie qua CORS
 }));
 
